@@ -3,9 +3,12 @@
 class HomeController{
 	public function index(){
 		try{
-			$loader = new \Twig\loader\FilesystemLoader('App/view');
+			$loader = new \Twig\loader\FilesystemLoader('App/View');
 			$twig = new \Twig\Environment($loader);
-			$template = $twig->load('index.html');
+			$template = $twig->load('PesquisaPedido.html');
+			echo $template->render();
+		}catch(Exception $e){
+			echo $e->getMessage();
 		}
 	}
 }

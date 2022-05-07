@@ -17,14 +17,29 @@ class Order{
 			throw new Exception("Nenhuma ordem foi localizada no banco de dados");
 		}
 		return $response;
+
+		
 	}
 
-	public static function SelectById($orderId){
-		$connection = Connection::getConn();
+	public static function SelectById($idUsuario){
+		/*$connection = Connection::getConn();
 
 		$query = "SELECT * FROM order WHERE orderId = :orderId";
 		$query = $connection->prepare($query);
 		$query->bindValue(':orderId', $orderId, PDO::PARAM_INT);
+		$query->execute();
+		$response = $query->fetchObject('Order');
+
+		if(!$response){
+			throw new Exception("Ordem " + $idOrder + " não foi localizada no banco de dados");
+		}	
+		return $response;*/
+
+		$connection = Connection::getConn();
+
+		$query = "SELECT * FROM usuario WHERE idUsuario = :idUsuario";
+		$query = $connection->prepare($query);
+		$query->bindValue(':idUsuario', $idUsuario, PDO::PARAM_INT);
 		$query->execute();
 		$response = $query->fetchObject('Order');
 
@@ -57,6 +72,13 @@ class Order{
 		$query->bindValue(':EntregaData', $Order['EntregaData']);
 		$query->bindValue(':PedidoStatus', $Order['PedidoStatus']);
 		$query->bindValue(':AtualDescricao', $Order['AtualDescricao']);
+
+		/*$query = "INSERT INTO usuario(idUsuario, userName, userPass, fullName) VALUES (:idUsuario, :userName, :userPass, :fullName)";
+		$query = $connection->prepare($query);
+		$query->bindValue(':idUsuario', $Order['idUsuario']);
+		$query->bindValue(':userName', $Order['userName']);
+		$query->bindValue(':userPass', $Order['userPass']);
+		$query->bindValue(':fullName', $Order['fullName']);*/
 
 		$response = $query->execute();
 

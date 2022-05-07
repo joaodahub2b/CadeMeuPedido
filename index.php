@@ -5,13 +5,9 @@ session_start();
 require_once('App/Core/Core.php');
 require_once('lib/Connection.php');
 require_once('App/Controller/HomeController.php');
-require_once('App/Controller/PostController.php');
 require_once('App/Controller/ErroController.php');
-require_once('App/Controller/AdminController.php');
-require_once('App/Controller/LoginController.php');
-require_once('App/Model/Postagem.php');
-require_once('App/Model/Comentarios.php');
-require_once('App/Model/Usuario.php');
+require_once('App/Controller/RegisterController.php');
+require_once('App/Model/Order.php');
 
 require_once('vendor/autoload.php');
 

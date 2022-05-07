@@ -1,0 +1,105 @@
+Header{
+	background-color: #DDDDDD;
+	width: 100vw;
+	height: 25vh;
+}
+
+h2{
+	font-family: Arial;
+}
+
+a{
+	font-family: Arial;
+}
+
+.linksCabecalho{
+	width: 100vw;
+	height: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 140px;
+	font-size: 10px;
+}
+
+.menu{
+	padding: 120px;
+}
+
+.cadastro{
+	display: flex;
+	position: absolute;
+	top: 10%;
+	left: 75%;
+}
+
+#login{
+	padding: 8px 20px;
+	margin-right: 30px;
+	border: solid;
+	border-color: #51999D;
+	color: #51999D;
+}
+
+#login:hover{
+	background-color: #51999D;
+	color: white;
+}
+
+#cadastrar-se{
+	background-color: #51999D;
+	color: white;
+	padding: 8px 20px;
+}
+
+#cadastrar-se:hover{
+	background-color: transparent;
+	border: solid;
+	border-color: #51999D;
+	color: #51999D;
+}
+
+.pesquisaPedido{
+	margin: auto;
+	width: 220px;
+
+}
+
+.codigoPedido{
+	border: solid;
+	border-color: #51999D;
+	background-color: #C4C4C4;
+	text-align: center;
+	padding: 15px 0px;
+	margin-top: 50%;
+}
+
+.botao{
+	display: flex;
+  	justify-content: center;
+  	color: white;
+	background-color: #51999D;
+	text-align: center;
+	padding: 15px 118px;
+	margin-top: 25px;
+}
+
+.botao:hover{
+	display: flex;
+  	justify-content: center;
+  	color: #51999D;
+	background-color: white;
+	text-align: center;
+	padding: 12px 115px;
+	border: solid;
+	border-color: #51999D;
+}
+
+Footer{
+	width: 100vw;
+	background-color: #B4B4B4;
+	bottom: 0;
+    position: fixed;
+    text-align: center;
+}
